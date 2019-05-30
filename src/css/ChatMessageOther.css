@@ -1,0 +1,13 @@
+.chat_message_other {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  padding: 10px;
+}
+
+.chat_message-message.other-message {
+  margin-left: 10px;
+  padding: 10px 10px 0 10px;
+  background: rgb(72, 255, 255);
+  box-shadow: 0 4px 8px -6px black;
+}

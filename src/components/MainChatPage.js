@@ -10,7 +10,9 @@ const MainChatPage = props => {
   return(
     <div className="main-chat-page">
       <ChatHeader chatTitle="Quote Bot"/>
+      
       <ChatDialogues/>
+
       <div className="main_chat_page_chat-input">
         <ChatInput/>
       </div>

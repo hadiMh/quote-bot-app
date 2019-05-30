@@ -12,11 +12,21 @@
 }
 
 .chat_message-message {
-  margin-right: 10px;
-  padding: 10px 10px 0 10px;;
-  background: rgb(164, 178, 255);
   border-radius: 10px;
-  max-width: 50%;
+  max-width: 40%;
   direction:rtl;
   text-align:right;
+}
+
+.chat_message-message.self-message {
+  margin-right: 10px;
+  padding: 10px 10px 0 10px;
+  background: #7bed9f;
+  box-shadow: 0 4px 8px -6px black;
+}
+
+.chat_message-time {
+  color: grey;
+  font-size: 12px;
+  margin-top: 3px;
 }
