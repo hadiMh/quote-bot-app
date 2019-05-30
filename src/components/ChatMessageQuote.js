@@ -10,7 +10,10 @@ const ChatMessageQuote = props => {
       <div className="chat_message_img">
         <img src={props.userImgSrc}/>
       </div>
-      <QuoteDesignMessage/>
+      <QuoteDesignMessage
+        quoteText={props.quoteText}
+        quoteAuthor={props.quoteAuthor}
+      />
     </div>
   )
 }

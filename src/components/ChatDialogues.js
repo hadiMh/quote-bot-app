@@ -45,8 +45,26 @@ const ChatDialogues = props => {
     },])
   }
 
-  const onAuthorNameClick = (author) => {
-    console.log(props.getAuthorQuoteFunc(author))
+  const addThisQuoteToMessages = (quoteText, quoteAuthor) => {
+    setMessages([...messages, {
+      quoteText: quoteText,
+      quoteAuthor: quoteAuthor,
+      messageTime: getNowTime(),
+      userImgSrc: "https://css-tricks.com/wp-content/themes/CSS-Tricks-17/ads/wufoo/600x500_clocks_yellow.png",
+      type: 'quote-message'
+    },{
+      messageButtons: [...props.listOfAuthors],
+      messageTime: getNowTime(),
+      userImgSrc: "https://css-tricks.com/wp-content/themes/CSS-Tricks-17/ads/wufoo/600x500_clocks_yellow.png",
+      type: 'button-message'
+    }])
+  }
+
+  const onAuthorNameClick = (authorName) => {
+    const authorQuotes = props.getAuthorQuoteFunc(authorName);
+    console.log(authorQuotes);
+    const randomQuote = authorQuotes.authorQuotes[Math.floor(Math.random(authorQuotes.length))];
+    addThisQuoteToMessages(randomQuote, authorName);
   }
 
   useEffect(()=>{
@@ -71,16 +89,18 @@ const ChatDialogues = props => {
         />
       }
     }
+    else if(message.type === 'quote-message') {
+      return <ChatMessageQuote
+              quoteText={message.quoteText}
+              quoteAuthor={message.quoteAuthor}
+              userImgSrc="https://css-tricks.com/wp-content/themes/CSS-Tricks-17/ads/wufoo/600x500_clocks_yellow.png"
+            />
+    }
   })
   
   return (
     <div className="chat_dialogues">
       {listOfMessages}
-      <ChatMessageQuote
-        messageText=" 'از لیست زیر، فرد مورد نظرخود را انتخاب کنید:'"
-        messageTime="12:12:12"
-        userImgSrc="https://css-tricks.com/wp-content/themes/CSS-Tricks-17/ads/wufoo/600x500_clocks_yellow.png"
-      />
     </div>
   )
 }

@@ -6,9 +6,9 @@ const PaperNote = props => {
   return <div class="blockquote-wrapper">
           <div class="blockquote">
             <h1>
-            آنان كه توان آزردن دارند و هیچ كس را نمی آزارند به درستی كه وارثان شكوه ملكوتند.
+              {props.quoteText}
             </h1>
-            <h4>ویلیام شکسپیر</h4>
+            <h4>{props.quoteAuthor}</h4>
           </div>
         </div>
 }
