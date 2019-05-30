@@ -12,7 +12,7 @@ const ChatDialogues = props => {
   const getNowTime = (() => {
     return today.getHours()%12 + ':' + today.getMinutes() + ':' + today.getSeconds();
   })
-debugger;
+
   const [createNewPost, setCreateNewPost] = useState(false);
   const [messages, setMessages] = useState([{
       messageText: 'سلام',
@@ -36,7 +36,7 @@ debugger;
   ]);
   
   useEffect(()=>{
-    debugger;
+    
     setMessages([...messages, {
       messageButtons: [...props.listOfAuthors],
       messageTime: getNowTime(),

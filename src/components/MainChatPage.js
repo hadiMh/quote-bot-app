@@ -35,9 +35,9 @@ const MainChatPage = props => {
       }
     });
     setListOfQuotes(result);
-    debugger;
+    
     setListOfAuthorsButtons(authorsButtons);
-    debugger;
+    
   }
 
   useEffect( () => {
@@ -49,7 +49,7 @@ const MainChatPage = props => {
     }
     fetchData();
   }, [])
-  debugger;
+  
   return(
     <div className="main-chat-page">
       <ChatHeader chatTitle="Quote Bot"/>

@@ -1,0 +1,24 @@
+.quote-author-btn {
+  width: 50%;
+  font-family: "shahab";
+  font-size: 14px;
+  border-radius: 50px;
+  width: 70px;
+  height: 70px;
+  margin: 10px 10px 10px 10px;
+  background: #F62459;
+  color:white;
+}
+
+.quote-author-btn,
+.quote-author-btn button :active,
+.quote-author-btn button :focus {
+  border-width: 0px;
+  outline: none !important;
+}
+
+.buttons-of-authors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
