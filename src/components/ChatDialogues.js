@@ -18,19 +18,19 @@ const ChatDialogues = props => {
   const [messages, setMessages] = useState([{
       messageText: 'سلام',
       messageTime: getNowTime(),
-      userImgSrc: "https://css-tricks.com/wp-content/themes/CSS-Tricks-17/ads/wufoo/600x500_clocks_yellow.png",
+      userImgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-OMosn8iATqVgi85l_pvgY001mV1QqR8PN-9uF8ZD4SE173Cv6A",
       type: 'normal-other-message'
     },
     {
       messageText: 'به ربات خوش آمدید',
       messageTime: getNowTime(),
-      userImgSrc: "https://css-tricks.com/wp-content/themes/CSS-Tricks-17/ads/wufoo/600x500_clocks_yellow.png",
+      userImgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-OMosn8iATqVgi85l_pvgY001mV1QqR8PN-9uF8ZD4SE173Cv6A",
       type: 'normal-other-message'
     },
     {
       messageText: 'از لیست زیر، فرد مورد نظرخود را انتخاب کنید:',
       messageTime: getNowTime(),
-      userImgSrc: "https://css-tricks.com/wp-content/themes/CSS-Tricks-17/ads/wufoo/600x500_clocks_yellow.png",
+      userImgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-OMosn8iATqVgi85l_pvgY001mV1QqR8PN-9uF8ZD4SE173Cv6A",
       type: 'normal-other-message'
     },
     
@@ -40,7 +40,7 @@ const ChatDialogues = props => {
     setMessages([...messages, {
       messageButtons: [...props.listOfAuthors],
       messageTime: getNowTime(),
-      userImgSrc: "https://css-tricks.com/wp-content/themes/CSS-Tricks-17/ads/wufoo/600x500_clocks_yellow.png",
+      userImgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-OMosn8iATqVgi85l_pvgY001mV1QqR8PN-9uF8ZD4SE173Cv6A",
       type: 'button-message'
     },])
   }
@@ -49,18 +49,18 @@ const ChatDialogues = props => {
     setMessages([...messages, {
       messageText: quoteAuthor,
       messageTime: getNowTime(),
-      userImgSrc: "https://css-tricks.com/wp-content/themes/CSS-Tricks-17/ads/wufoo/600x500_clocks_yellow.png",
+      userImgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStzEfgpFZgok3ov95r_dbthnJifJyE0K-Wkfrulp0NKsudL2FwiA",
       type: 'normal-self-message'
     },{
       quoteText: quoteText,
       quoteAuthor: quoteAuthor,
       messageTime: getNowTime(),
-      userImgSrc: "https://css-tricks.com/wp-content/themes/CSS-Tricks-17/ads/wufoo/600x500_clocks_yellow.png",
+      userImgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-OMosn8iATqVgi85l_pvgY001mV1QqR8PN-9uF8ZD4SE173Cv6A",
       type: 'quote-message'
     },{
       messageButtons: [...props.listOfAuthors],
       messageTime: getNowTime(),
-      userImgSrc: "https://css-tricks.com/wp-content/themes/CSS-Tricks-17/ads/wufoo/600x500_clocks_yellow.png",
+      userImgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-OMosn8iATqVgi85l_pvgY001mV1QqR8PN-9uF8ZD4SE173Cv6A",
       type: 'button-message'
     }])
   }
@@ -98,7 +98,7 @@ const ChatDialogues = props => {
       return <ChatMessageQuote
               quoteText={message.quoteText}
               quoteAuthor={message.quoteAuthor}
-              userImgSrc="https://css-tricks.com/wp-content/themes/CSS-Tricks-17/ads/wufoo/600x500_clocks_yellow.png"
+              userImgSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-OMosn8iATqVgi85l_pvgY001mV1QqR8PN-9uF8ZD4SE173Cv6A"
             />
     }
     else if(message.type === 'normal-self-message') {
