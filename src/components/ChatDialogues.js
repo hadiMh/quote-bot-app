@@ -35,22 +35,23 @@ const ChatDialogues = props => {
     
   ]);
   
-  useEffect(()=>{
-    
+  const showTheListOfAuthorsButtonsMessage = () => {
     setMessages([...messages, {
       messageButtons: [...props.listOfAuthors],
       messageTime: getNowTime(),
       userImgSrc: "https://css-tricks.com/wp-content/themes/CSS-Tricks-17/ads/wufoo/600x500_clocks_yellow.png",
       type: 'button-message'
     },])
-    
-    
+  }
+
+  const onAuthorNameClick = (author) => {
+    console.log(props.getAuthorQuoteFunc(author))
+  }
+
+  useEffect(()=>{
+    showTheListOfAuthorsButtonsMessage();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.listOfAuthors])
-  
-  // useEffect( () => {
-
-  // }, messages)
 
   let listOfMessages = messages.map( message => {
     if(message.type === 'normal-message')
@@ -63,6 +64,7 @@ const ChatDialogues = props => {
       if(message.messageButtons.length != 0){
         return <ChatButtonMessage
           messageButtons={message.messageButtons}
+          onAuthorNameClickFunc={onAuthorNameClick}
           messageTime={message.messageTime}
           userImgSrc={message.userImgSrc}
         />

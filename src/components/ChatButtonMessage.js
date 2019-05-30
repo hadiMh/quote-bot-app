@@ -5,16 +5,12 @@ import '../css/ChatButtonMessage.css';
 const ChatButtonMessage = props => {
   let buttons = <div></div>;
 
-  const handleButtonClick = (e) => {
-    console.log(e.target.innerHTML)
-  }
-
   if(props.messageButtons){
     buttons = props.messageButtons.map( buttonDetails => {
       return <button 
         className="quote-author-btn"
         key={buttonDetails.buttonId}
-        onClick={e => {handleButtonClick(e)}}
+        onClick={e => {props.onAuthorNameClickFunc(e.target.innerHTML)}}
         >
           {buttonDetails.buttonText}
         </button>

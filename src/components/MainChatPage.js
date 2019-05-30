@@ -36,8 +36,11 @@ const MainChatPage = props => {
     });
     setListOfQuotes(result);
     
-    setListOfAuthorsButtons(authorsButtons);
-    
+    setListOfAuthorsButtons(authorsButtons); 
+  }
+
+  const getThisAuthorQuotes = (authorName) => {
+    return listOfQuotes[authorName];
   }
 
   useEffect( () => {
@@ -54,7 +57,7 @@ const MainChatPage = props => {
     <div className="main-chat-page">
       <ChatHeader chatTitle="Quote Bot"/>
       
-      <ChatDialogues listOfAuthors={listOfAuthorsButtons.slice(0,22)}/>
+      <ChatDialogues listOfAuthors={listOfAuthorsButtons.slice(0,21)} getAuthorQuoteFunc={getThisAuthorQuotes}/>
 
       <div className="main_chat_page_chat-input">
         <ChatInput/>
