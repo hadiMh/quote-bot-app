@@ -1,0 +1,11 @@
+.main-chat-page {
+  background: white;
+  height: 100%;
+  position: relative;
+}
+
+.main_chat_page_chat-input {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}

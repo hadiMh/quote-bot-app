@@ -1,0 +1,32 @@
+.chat_input {
+  width: 100%;
+  background: rgb(228, 228, 228);
+  height: 35px;
+  line-height: 35px;
+  float: right;
+}
+
+.chat_input input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 15px;
+  direction:RTL;
+  padding-right: 38px;
+}
+
+.chat_input_input-div {
+  display: inline;
+}
+
+.chat_input-send-btn {
+  display: inline;
+  position: absolute;
+  right: 0;
+  height: 100%;
+}
+
+.chat_input-send-btn img {
+  height: 100%;
+  display: inline;
+}
