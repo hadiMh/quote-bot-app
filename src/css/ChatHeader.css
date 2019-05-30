@@ -9,3 +9,7 @@
   font-weight: 700;
   font-size: 20px;
 }
+
+.chat_header {
+  box-shadow: 0 8px 10px -6px rgb(167, 167, 167);
+}
