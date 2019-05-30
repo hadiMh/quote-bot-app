@@ -1,0 +1,25 @@
+.chat_message_quote {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  padding: 10px;
+}
+
+.quote-message {
+  width: 100%;
+  background: yellow;
+}
+
+.chat_message-quote {
+  border-radius: 10px;
+  max-width: 100%;
+  direction:rtl;
+  text-align:right;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.chat_message-quote.quote-message {
+  margin: 10px 10px 0 10px;
+  width: 100% !important;
+}
