@@ -1,8 +1,8 @@
 .chat_dialogues {
-  background: #70a2ff3f;
+  background: #ffffff3f;
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 500px;
+  height: 89%;
 }
 
 /* .chat_dialogues::-webkit-scrollbar-track

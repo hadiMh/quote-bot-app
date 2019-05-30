@@ -8,6 +8,12 @@
 .chat_message-message.other-message {
   margin-left: 10px;
   padding: 10px 10px 0 10px;
-  background: rgb(72, 255, 255);
+  background: #cdeafc;
   box-shadow: 0 4px 8px -6px black;
+  color: #50718f;
+  position: relative;
+}
+
+.chat_message-message.other-message .chat_message-time {
+  float: left;
 }

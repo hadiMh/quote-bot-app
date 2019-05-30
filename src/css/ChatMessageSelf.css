@@ -13,15 +13,17 @@
 
 .chat_message-message {
   border-radius: 10px;
-  max-width: 40%;
+  max-width: 70%;
   direction:rtl;
   text-align:right;
+  color: #ffffff;
+  margin-bottom: 20px;
 }
 
 .chat_message-message.self-message {
   margin-right: 10px;
   padding: 10px 10px 0 10px;
-  background: #7bed9f;
+  background: #817cce;
   box-shadow: 0 4px 8px -6px black;
 }
 
@@ -29,4 +31,6 @@
   color: grey;
   font-size: 12px;
   margin-top: 3px;
+  position: relative;
+  top: 25px;
 }
