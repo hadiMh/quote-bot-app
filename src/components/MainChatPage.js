@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import quoteApi from '../api/quoteApi.js';
+import { quoteApi } from '../api/quoteApi.js';
 
 import ChatHeader from './ChatHeader.js';
 import ChatInput from './ChatInput.js';
@@ -55,9 +55,10 @@ const MainChatPage = props => {
   
   return(
     <div className="main-chat-page">
+    
       <ChatHeader chatTitle="Quote Bot"/>
       
-      <ChatDialogues listOfAuthors={listOfAuthorsButtons.slice(0,21)} getAuthorQuoteFunc={getThisAuthorQuotes}/>
+      <ChatDialogues listOfAuthors={listOfAuthorsButtons.slice(21,42)} getAuthorQuoteFunc={getThisAuthorQuotes}/>
 
       <div className="main_chat_page_chat-input">
         <ChatInput/>
