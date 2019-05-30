@@ -55,7 +55,6 @@ const MainChatPage = props => {
   
   return(
     <div className="main-chat-page">
-    
       <ChatHeader chatTitle="Quote Bot"/>
       
       <ChatDialogues listOfAuthors={listOfAuthorsButtons.slice(21,42)} getAuthorQuoteFunc={getThisAuthorQuotes}/>
