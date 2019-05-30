@@ -10,17 +10,34 @@ import '../css/MainChatPage.css';
 
 const MainChatPage = props => {
   const [jsonApiData, setJsonApiData] = useState({})
+  const [listOfQuotes, setListOfQuotes] = useState([]);
+  const [listOfAuthorsButtons, setListOfAuthorsButtons] = useState([]);
+
+  const onAuthorClick = (authorName) => {
+    Math.floor(Math.random() * Math.floor());
+  }
 
   const organizeJsonData = (jsonData) => {
     let result = {};
+    let authorsButtons = [];
     jsonData.data.Quotations.forEach(element => {
       if(!result.hasOwnProperty(element.Author)){
-        result[element.Author] = [element.Quotation]
+        result[element.Author] = {
+          authorId: Object.keys(result).length,
+          authorQuotes: [element.Quotation]
+        }
+        authorsButtons.push({
+          buttonId: result[element.Author].authorId,
+          buttonText: element.Author
+        })
       }else{
-        result[element.Author].push(element.Quotation)
+        result[element.Author].authorQuotes.push(element.Quotation)
       }
     });
-    console.log(result);
+    setListOfQuotes(result);
+    debugger;
+    setListOfAuthorsButtons(authorsButtons);
+    debugger;
   }
 
   useEffect( () => {
@@ -32,12 +49,12 @@ const MainChatPage = props => {
     }
     fetchData();
   }, [])
-
+  debugger;
   return(
     <div className="main-chat-page">
       <ChatHeader chatTitle="Quote Bot"/>
       
-      <ChatDialogues/>
+      <ChatDialogues listOfAuthors={listOfAuthorsButtons.slice(0,22)}/>
 
       <div className="main_chat_page_chat-input">
         <ChatInput/>

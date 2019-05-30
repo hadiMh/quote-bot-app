@@ -3,10 +3,19 @@ import React, {useState, useEffect} from 'react';
 import '../css/ChatButtonMessage.css';
 
 const ChatButtonMessage = props => {
-  let buttons = props.messageButtons.map( buttonDetails => {
-    return <button className="quote-author-btn">{buttonDetails.buttonText}</button>
-  })
-
+  let buttons = <div></div>;
+  if(props.messageButtons){
+    
+    buttons = props.messageButtons.map( buttonDetails => {
+      return <button 
+        className="quote-author-btn"
+        key={buttonDetails.buttonId}
+        onClick={e => {console.log(e)}}
+        >
+          {buttonDetails.buttonText}
+        </button>
+    })
+  }
   return (
     <div className="chat_message_other">
       <div className="chat_message_img">
