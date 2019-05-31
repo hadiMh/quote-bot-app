@@ -2,8 +2,6 @@ import React from 'react';
 
 import '../css/ChatMessageQuote.css';
 
-import { twitterShare } from '../api/quoteApi.js';
-
 import QuoteDesignMessage from './QuoteDesignMessage.js';
 
 const ChatMessageQuote = props => {
@@ -15,7 +13,7 @@ const ChatMessageQuote = props => {
   return (
     <div className="chat_message_quote">
       <div className="chat_message_img">
-        <img src={props.userImgSrc}/>
+        <img alt="user-img" src={props.userImgSrc}/>
       </div>
       <QuoteDesignMessage
         quoteText={props.quoteText}

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState } from 'react';
 
 import '../css/ChatInput.css';
 import sendImg from '../imgs/send-img.png';
@@ -9,14 +9,14 @@ const ChatInput = props => {
   const onFormSubmit = e => {
     e.preventDefault();
 
-    console.log(term);
+    // console.log(term);
     setTerm('');
   }
 
   return (
     <div className="chat_input">
       <div className="chat_input-atach-btn">
-        <img src="https://img.icons8.com/ultraviolet/40/000000/attach.png"/>
+        <img alt="attach-icon" src="https://img.icons8.com/ultraviolet/40/000000/attach.png"/>
       </div>
       <div className="chat_input_input-div">
         <form onSubmit={(e) => onFormSubmit(e)}>
@@ -24,7 +24,7 @@ const ChatInput = props => {
         </form>
       </div>
       <div className="chat_input-send-btn">
-        <img src={sendImg}/>
+        <img alt="chat-send-btn" src={sendImg}/>
       </div>
     </div>
   )

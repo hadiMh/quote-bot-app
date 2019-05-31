@@ -6,7 +6,7 @@ const ChatMessageSelf = props => {
   return (
     <div className="chat_message_self">
       <div className="chat_message_img">
-        <img src={props.userImgSrc}/>
+        <img alt="user-img" src={props.userImgSrc}/>
       </div>
       <div className="chat_message-message self-message">
         <p>{props.messageText}</p>

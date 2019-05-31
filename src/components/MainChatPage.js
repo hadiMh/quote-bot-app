@@ -9,13 +9,13 @@ import ChatDialogues from './ChatDialogues.js';
 import '../css/MainChatPage.css';
 
 const MainChatPage = props => {
-  const [jsonApiData, setJsonApiData] = useState({})
+  // const [jsonApiData, setJsonApiData] = useState({})
   const [listOfQuotes, setListOfQuotes] = useState([]);
   const [listOfAuthorsButtons, setListOfAuthorsButtons] = useState([]);
 
-  const onAuthorClick = (authorName) => {
-    Math.floor(Math.random() * Math.floor());
-  }
+  // const onAuthorClick = (authorName) => {
+  //   Math.floor(Math.random() * Math.floor());
+  // }
 
   const organizeJsonData = (jsonData) => {
     let result = {};
@@ -45,9 +45,9 @@ const MainChatPage = props => {
 
   useEffect( () => {
     async function fetchData() {
-      console.log("use effect runs")
+      // console.log("use effect runs")
       const response = await quoteApi.get('/');
-      console.log(response);
+      // console.log(response);
       organizeJsonData(response);
     }
     fetchData();
@@ -57,7 +57,7 @@ const MainChatPage = props => {
     <div className="main-chat-page">
       <ChatHeader chatTitle="Quote Bot"/>
       
-      <ChatDialogues listOfAuthors={listOfAuthorsButtons.slice(21,42)} getAuthorQuoteFunc={getThisAuthorQuotes}/>
+      <ChatDialogues listOfAuthors={listOfAuthorsButtons.slice(0, 21)} getAuthorQuoteFunc={getThisAuthorQuotes}/>
 
       <div className="main_chat_page_chat-input">
         <ChatInput/>

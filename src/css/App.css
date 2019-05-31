@@ -41,6 +41,10 @@ p {
   height: 100%;
 }
 
+.main-app-container {
+  margin: 0 auto !important;
+}
+
 .height-100 {
   height: 100vh;
   margin-bottom: -10%;

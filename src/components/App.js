@@ -9,7 +9,7 @@ const App = () => {
     <div className="height-100 row">
       <div className="col-lg-2 hidden-lg-down">
       </div>
-      <div className="col-lg-8 col-xs-12 container">
+      <div className="main-app-container col-lg-8 col-xs-12 container">
         <MainChatPage/>
       </div>
       <div className="col-lg-2 hidden-lg-down">

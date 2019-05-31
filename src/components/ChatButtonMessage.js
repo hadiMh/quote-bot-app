@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 
 import '../css/ChatButtonMessage.css';
 
@@ -19,7 +19,7 @@ const ChatButtonMessage = props => {
   return (
     <div className="chat_message_other">
       <div className="chat_message_img">
-        <img src={props.userImgSrc}/>
+        <img alt="user-img" src={props.userImgSrc}/>
       </div>
       <div className="chat_message-message other-message">
           <div className="buttons-of-authors">

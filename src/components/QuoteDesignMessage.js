@@ -14,6 +14,7 @@ const QuoteDesignMessage = props => {
             </h1>
             <h4>
               <img 
+                alt="twitter-img"
                 className="twitter-share-img"
                 src="https://img.icons8.com/color/48/000000/twitter.png"
                 onClick={e => {onShareButtonClick(e)}}
