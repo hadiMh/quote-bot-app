@@ -5,6 +5,7 @@ import '../css/ChatButtonMessage.css';
 const ChatButtonMessage = props => {
   let buttons = <div></div>;
 
+  /* generate buttons for the button message */
   if(props.messageButtons){
     buttons = props.messageButtons.map( buttonDetails => {
       return <button 
@@ -16,6 +17,7 @@ const ChatButtonMessage = props => {
         </button>
     })
   }
+  
   return (
     <div className="chat_message_other">
       <div className="chat_message_img">

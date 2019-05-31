@@ -6,10 +6,10 @@ import sendImg from '../imgs/send-img.png';
 const ChatInput = props => {
   const [term, setTerm] = useState('');
 
+  /* When the user hits enter in the input field. the text is in the 'term' variable in this functional component */
   const onFormSubmit = e => {
     e.preventDefault();
 
-    // console.log(term);
     setTerm('');
   }
 

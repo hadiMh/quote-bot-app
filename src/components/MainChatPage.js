@@ -9,14 +9,12 @@ import ChatDialogues from './ChatDialogues.js';
 import '../css/MainChatPage.css';
 
 const MainChatPage = props => {
-  // const [jsonApiData, setJsonApiData] = useState({})
+  /* keeping list of quotes based on each author */
   const [listOfQuotes, setListOfQuotes] = useState([]);
+  /* list of all authors in corresponding button tags to render in the ChatButtonMessage */
   const [listOfAuthorsButtons, setListOfAuthorsButtons] = useState([]);
 
-  // const onAuthorClick = (authorName) => {
-  //   Math.floor(Math.random() * Math.floor());
-  // }
-
+  /* create list of quotes and authors button from the json data that was fetched */
   const organizeJsonData = (jsonData) => {
     let result = {};
     let authorsButtons = [];
@@ -39,10 +37,12 @@ const MainChatPage = props => {
     setListOfAuthorsButtons(authorsButtons); 
   }
 
+  /* return all of the quotes of this author */
   const getThisAuthorQuotes = (authorName) => {
     return listOfQuotes[authorName];
   }
 
+  /* fetch data */
   useEffect( () => {
     async function fetchData() {
       // console.log("use effect runs")

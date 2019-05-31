@@ -5,7 +5,8 @@ import '../css/ChatMessageQuote.css';
 import QuoteDesignMessage from './QuoteDesignMessage.js';
 
 const ChatMessageQuote = props => {
-  const onShareBtnClick = async (textToShare) => {
+  /* Shares the text of quote with twitter api - opening in new tab */
+  const onShareBtnClick = (textToShare) => {
     var win = window.open('https://twitter.com/intent/tweet?text='+textToShare.split(' ').join('%20'), '_blank');
     win.focus();
   }

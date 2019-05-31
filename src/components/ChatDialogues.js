@@ -10,11 +10,12 @@ import '../css/ChatDialogues.css';
 const ChatDialogues = props => {
   let today = new Date();
 
+  /* Get the current time */
   const getNowTime = (() => {
     return today.getHours()%12 + ':' + today.getMinutes() + ':' + today.getSeconds();
   })
 
-  // const [createNewPost, setCreateNewPost] = useState(false);
+  /* Create messages variable for keeping the chat message and initialize it with the first greeding messages */
   const [messages, setMessages] = useState([{
       messageText: 'سلام',
       messageTime: getNowTime(),
@@ -39,6 +40,7 @@ const ChatDialogues = props => {
     
   ]);
   
+  /* This function send another message in chat to the user to show the authors buttons */
   const showTheListOfAuthorsButtonsMessage = () => {
     setMessages([...messages, {
       messageButtons: [...props.listOfAuthors],
@@ -49,6 +51,7 @@ const ChatDialogues = props => {
     },])
   }
 
+  /* This function adds the quote message to the chat messages alogside the user message asking the authors name and the list of authors again */
   const addThisQuoteToMessages = (quoteText, quoteAuthor) => {
     setMessages([...messages, {
       messageText: quoteAuthor,
@@ -72,6 +75,7 @@ const ChatDialogues = props => {
     }])
   }
 
+  /* When an author name button is clicked, this function runs and get a random quote from the author and shows it in the chat messages */
   const onAuthorNameClick = (authorName) => {
     const authorQuotes = props.getAuthorQuoteFunc(authorName);
     // console.log(authorQuotes);
@@ -79,11 +83,13 @@ const ChatDialogues = props => {
     addThisQuoteToMessages(randomQuote, authorName);
   }
 
+  /* This effect runs for the creation of component and when the props.listOfAuthors is changed(this would not change) */
   useEffect(()=>{
     showTheListOfAuthorsButtonsMessage();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.listOfAuthors])
 
+  /* map function to create the html list of messages based of the list of message json array that is created before */
   let listOfMessages = messages.map( message => {
     if(message.type === 'normal-other-message'){
       return <ChatMessageOther
